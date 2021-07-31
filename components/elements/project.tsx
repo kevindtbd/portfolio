@@ -24,13 +24,13 @@ const StyledTagContainer = styled(StyledFlexContainer)`
 
 const StyledCard = styled(StyledFlexContainer)<{ color: Colors }>`
     background: ${(props) => `linear-gradient(to bottom right, ${props.color}, ${props.color}9f)`};
-    background-image: url(${Blob}), url(${Blob1}), ${(props) => `linear-gradient(to bottom right, ${props.color}, ${props.color}9f)`};
+    // background-image: url(${Blob}), url(${Blob1}), ${(props) => `linear-gradient(to bottom right, ${props.color}, ${props.color}9f)`};
 
  
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: top left, right, bottom right;
     border-radius: 7px;
-    max-width: 1200px;
+    max-width: calc(100vw - 80px);
     color: white;
     padding: 4rem 2rem;
     margin-bottom: 3rem; 
@@ -40,24 +40,16 @@ const StyledCard = styled(StyledFlexContainer)<{ color: Colors }>`
       font-size: 28px;
     }
 
-
-    @media screen and (min-width: 500px) {
-      & {
-        
-        max-width: calc(100vw - 90px);
-      }
-    }
-
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) {
       & {
         flex-wrap: nowrap;
-        max-width: 700px;
+        max-width: 80vw;
       }
     }
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: 1200px) {
       & {
-        max-width: 990px;
+          max-width: 1100px;
       }
     }
 

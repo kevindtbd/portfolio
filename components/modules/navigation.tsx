@@ -1,13 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import Burger from '../elements/burger';
 
 const StyledNavigation = styled.header`
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 10; 
     display: flex;
     justify-content: center; 
     color: white; 
@@ -29,12 +30,6 @@ const StyledHeaderContainer = styled.div`
             max-width: 960px;
         }
     }
-
-    @media screen and (min-width: 446px){
-        & {
-            max-width: calc(100)
-        }
-    }
 `;
 
 const StyledHeaderSection = styled.div`
@@ -52,17 +47,36 @@ const StyledLinkContainer = styled.div`
     justify-content: space-between;
 
     & a {
+        display: none;
+        color: #dadada;
         margin-left: 2rem;
     }
+
+    @media screen and (min-width: 800px) {
+      & a {
+        display: block;
+      }
+
+      & button {
+        display: none;
+      }
+    }
+
 `;
 
-export default function Navigation() {
+type NavigationProps = {
+  open: boolean,
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+};
+
+export default function Navigation({ open, setOpen }: NavigationProps) {
   return (
     <StyledNavigation>
       <StyledHeaderContainer>
         <StyledHeaderSection>
           <span>Logo</span>
           <StyledLinkContainer>
+            <Burger open={open} setOpen={setOpen} />
             <Link href="/#about">About</Link>
             <Link href="/#skills">Skills</Link>
             <Link href="/#work">Work</Link>

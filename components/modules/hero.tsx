@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import styled from 'styled-components';
 
 const StyledHeroContainer = styled.section`
@@ -7,7 +6,7 @@ const StyledHeroContainer = styled.section`
   width: 100vw;
   height: 50vh;
   background: #00798C;
-  color: white;
+  color: white; 
 `;
 
 export default function Hero() {

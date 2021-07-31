@@ -14,6 +14,7 @@ export default function Jobs() {
                   } = job;
                   return (
                     <Project
+                      key={company}
                       excerpt={excerpt}
                       imgAttrs={imgAttrs}
                       company={company}

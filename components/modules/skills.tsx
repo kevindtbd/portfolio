@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Skillcard, { SkillCardProps } from '../elements/skillCard';
 import ReactLogo from '../../public/react.svg';
@@ -36,15 +37,29 @@ const skillset: Array<SkillCardProps> = [
 
 ];
 
+const StyledSkillContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+const StyledHeader = styled.h3`
+  text-align: center;
+  &:after {
+    content: ''
+  }
+`;
+
 export default function Skills() {
   return (
     <section>
-      <h3>Skills</h3>
-      <div>
+      <StyledHeader>Skills</StyledHeader>
+      <StyledSkillContainer>
         {
-          skillset.map((skill) => <Skillcard src={skill.src} alt={skill.alt} />)
+          skillset.map((skill) => <Skillcard key={skill.alt} src={skill.src} alt={skill.alt} />)
         }
-      </div>
+      </StyledSkillContainer>
     </section>
   );
 }
