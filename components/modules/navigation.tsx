@@ -45,11 +45,16 @@ const StyledLinkContainer = styled.div`
     display: flex; 
     align-items: center;
     justify-content: space-between;
+    transition: all 0.3s ease-in-out;
 
     & a {
         display: none;
         color: #dadada;
         margin-left: 2rem;
+    }
+
+    & a:hover {
+      color: white;
     }
 
     @media screen and (min-width: 800px) {

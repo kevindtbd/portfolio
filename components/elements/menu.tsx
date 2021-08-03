@@ -14,7 +14,7 @@ const boxShadow = css`
 const StyledMenu = styled.nav<MenuProps>`
     height: 100vh;
     width: 250px;
-    background: white;
+    background: #e6e6e6;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +29,7 @@ const StyledMenu = styled.nav<MenuProps>`
     z-index: 9;
     left: 0;
     transition: transform 0.3s ease-in-out;
-    transform: ${({ open }) => (open ? 'translateX(-100%)' : 'translateX(0%)')};
+    transform: ${({ open }) => (open ? 'translateX(0%)' : 'translateX(-100%)')};
 
     & a {
       margin-bottom: 1rem;

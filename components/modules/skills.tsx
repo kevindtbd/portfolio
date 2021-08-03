@@ -39,7 +39,7 @@ const skillset: Array<SkillCardProps> = [
 
 const StyledSkillContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
 `;

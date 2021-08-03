@@ -10,10 +10,25 @@ const StyledButton = styled.button`
     
 `;
 
+const StyledSection = styled.section`
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 80%;
+
+    & h3 {
+        font-size: 28px;
+    }
+`;
+
 export default function Contact() {
   return (
-    <section>
+    <StyledSection>
+      <h3>Get in Touch</h3>
+      <p>
+        Don&apos;t be afraid to reach out about anything.
+        I&apos;m always down for a conversation.
+      </p>
       <StyledButton>Contact Me</StyledButton>
-    </section>
+    </StyledSection>
   );
 }
