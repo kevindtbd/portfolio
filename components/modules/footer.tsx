@@ -2,18 +2,6 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import Github from '../icons/github';
 import LinkedIn from '../icons/linkedin';
-import WaveBackground from '../../public/footer-background.svg';
-
-function Wave() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#ffff"
-        d="M0 128l26.7-16C53.3 96 107 64 160 42.7c53.3-21.7 107-31.7 160 0C373.3 75 427 149 480 160c53.3 11 107-43 160-69.3C693.3 64 747 64 800 85.3c53.3 21.7 107 63.7 160 69.4 53.3 5.3 107-26.7 160-21.4 53.3 5.7 107 47.7 160 53.4 53.3 5.3 107-26.7 133-42.7l27-16V0H0z"
-      />
-    </svg>
-  );
-}
 
 const StyledFlexCss = css`
     display: flex;

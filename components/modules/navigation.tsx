@@ -7,6 +7,7 @@ const StyledNavigation = styled.header`
     position: absolute;
     top: 0;
     left: 0;
+    padding-top: 1rem;
     width: 100%;
     z-index: 10; 
     display: flex;
