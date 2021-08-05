@@ -4,7 +4,6 @@ import { email } from '../../constants/experience';
 
 const StyledButton = styled.a`
     background: ${(props) => props.theme.secondary};
-    background: #6573FF;
     color: white;
     padding: 16px 48px;
     font-size: 16px;

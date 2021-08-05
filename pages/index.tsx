@@ -4,6 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Header from '../components/modules/navigation';
 import Menu from '../components/elements/menu';
 import Hero from '../components/modules/hero';
+import About from '../components/modules/about';
 import Jobs from '../components/modules/jobs';
 import Skills from '../components/modules/skills';
 import Projects from '../components/modules/projects';
@@ -43,6 +44,7 @@ export default function Home() {
       <StyledMask open={open} />
       <main className={styles.main}>
         <Hero />
+        <About />
         <Skills />
         <Jobs />
         <Projects />

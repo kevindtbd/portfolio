@@ -14,11 +14,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const theme = {
-  primary: '#00798C',
+  primary: '#6573FF',
   secondary: '#FF6B6B',
-  button: `border: none;
-  color: white;
-  `,
+  accent: '#FFC64D',
+  accent2: '#FF8797',
+  accent3: '#414aa6',
 };
 
 function MyApp({ Component, pageProps }: AppProps) {

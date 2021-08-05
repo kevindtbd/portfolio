@@ -1,5 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 import styled, { css } from 'styled-components';
+
+const FlexContainer = css`
+  display: flex;
+  align-items: center;
+
+`;
 
 const HeroBackground = css`
 background-color: #414aa6;
@@ -14,12 +21,50 @@ const StyledHeroContainer = styled.section`
   height: 100vh;
   ${HeroBackground}
   color: white; 
+  ${FlexContainer}
+  justify-content: center;
+`;
+
+const StyledBannerContainer = styled.div`
+  ${FlexContainer}
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 90%;
+
+  // @media screen and (min-width: 900px) {
+  //   & {
+  //     max-width: 80%;
+  //   }
+  // }
+
+  // @media screen and (min-width: 900px) {
+  //   & {
+  //     max-width: 80%;
+  //   }
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   & {
+  //     max-width: 1100px;
+  //   }
+  // }
+
+`;
+
+const StyledHeroTextContainer = styled.div`
+  padding: 3rem 3rem;
 `;
 
 export default function Hero() {
   return (
     <StyledHeroContainer>
-      <h1>Graphic Design Is My Passion</h1>
+      <StyledBannerContainer>
+        <StyledHeroTextContainer>
+          <h1>Graphic Design Is My Passion</h1>
+          <span>(Kind of)</span>
+        </StyledHeroTextContainer>
+        <img src="https://i.kym-cdn.com/photos/images/original/001/018/903/29e.jpg" alt="clipart" />
+      </StyledBannerContainer>
     </StyledHeroContainer>
   );
 }

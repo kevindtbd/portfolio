@@ -44,17 +44,33 @@ const StyledSkillContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const StyledHeader = styled.h3`
-  text-align: center;
+const StyledHeaderWrapper = styled.div`
+  position: relative;
+  margin-bottom: 2rem;
   &:after {
-    content: ''
-  }
+    content: '';
+    width: 70px;
+    position: absolute;
+    right: 44%;
+    bottom: 0;
+    height: 10px;
+    display: block;
+    border-bottom: 3px solid ${(props) => props.theme.primary};
+}
+`;
+
+const StyledHeader = styled.h2`
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
 `;
 
 export default function Skills() {
   return (
     <section>
-      <StyledHeader>Skills</StyledHeader>
+      <StyledHeaderWrapper>
+        <StyledHeader>Skills</StyledHeader>
+      </StyledHeaderWrapper>
       <StyledSkillContainer>
         {
           skillset.map((skill) => <Skillcard key={skill.alt} src={skill.src} alt={skill.alt} />)
