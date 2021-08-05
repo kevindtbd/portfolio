@@ -55,25 +55,29 @@ url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' 
 `;
 
 const StyledProjectContainer = styled.div<{ color: string }>`
-max-width: calc(100vw - 80px);
-position: relative;
-border-radius: 16px;
-background-color: ${({ color }) => lightenDarkenColor(color, -30)};
-margin-bottom: 3rem; 
-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  max-width: calc(100vw - 80px);
+  position: relative;
+  border-radius: 16px;
+  background-color: ${({ color }) => lightenDarkenColor(color, -30)};
+  margin-bottom: 3rem; 
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
-@media screen and (min-width: 900px) {
-  & {
-    flex-wrap: nowrap;
-    max-width: 80vw;
+  & span {
+    color: #e6e6e6;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  & {
-      max-width: 1100px;
+  @media screen and (min-width: 900px) {
+    & {
+      flex-wrap: nowrap;
+      max-width: 80vw;
+    }
   }
-}
+
+  @media screen and (min-width: 1200px) {
+    & {
+        max-width: 1100px;
+    }
+  }
 `;
 
 const StyledCard = styled(StyledFlexContainer)<{ color: Colors }>`
@@ -160,7 +164,8 @@ position: relative;
 
 const StyledVisitContainer = styled.div`
   height: fit-content;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 `;
 
 const Project: FC<CardProps> = ({
@@ -180,12 +185,15 @@ const Project: FC<CardProps> = ({
           {
             title && (
             <>
-              <StyledJobSpan>{title}</StyledJobSpan>
-              <br />
+              <StyledJobSpan>
+                Role:
+                {' '}
+                {title}
+              </StyledJobSpan>
             </>
             )
           }
-          <StyledJobSpan>{`${timeline[0]} - ${timeline[1]}`}</StyledJobSpan>
+          <StyledJobSpan>{`From: ${timeline[0]} - ${timeline[1]}`}</StyledJobSpan>
           <StyledExcerpt>
             <span>{excerpt}</span>
           </StyledExcerpt>
