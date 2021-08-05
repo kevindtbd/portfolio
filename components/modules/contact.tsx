@@ -1,13 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
+import { email } from '../../constants/experience';
 
-const StyledButton = styled.button`
-    background: ${(props) => props.theme.primary};
-    ${(props) => props.theme.button};
+const StyledButton = styled.a`
+    background: ${(props) => props.theme.secondary};
+    color: white;
     padding: 16px 48px;
     font-size: 16px;
     border-radius: 5px;
+    position: relative;
     
+    &:after {
+      content: "";
+      display: inline-block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: transparent;
+      z-index: 3;
+      transition: background-color .3s ease-in-out;
+    }
+
+    &:hover:after, &:active:after {
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background .3s ease-in-out;
+      background: rgba(0,0,0,0.1);
+    }
 `;
 
 const StyledSection = styled.section`
@@ -18,17 +39,23 @@ const StyledSection = styled.section`
     & h3 {
         font-size: 28px;
     }
+
+    & div {
+      margin-bottom: 3rem;
+    }
 `;
 
 export default function Contact() {
   return (
     <StyledSection>
       <h3>Get in Touch</h3>
-      <p>
-        Don&apos;t be afraid to reach out about anything.
-        I&apos;m always down for a conversation.
-      </p>
-      <StyledButton>Contact Me</StyledButton>
+      <div>
+        <span>
+          Don&apos;t be afraid to reach out about anything.
+          I&apos;m always down for a conversation.
+        </span>
+      </div>
+      <StyledButton href={`mailto:${email}`}>Contact Me</StyledButton>
     </StyledSection>
   );
 }

@@ -8,6 +8,7 @@ import Jobs from '../components/modules/jobs';
 import Skills from '../components/modules/skills';
 import Projects from '../components/modules/projects';
 import Contact from '../components/modules/contact';
+import Footer from '../components/modules/footer';
 import styles from '../styles/Home.module.css';
 
 const GlobalStyle = createGlobalStyle`
@@ -47,13 +48,7 @@ export default function Home() {
         <Projects />
         <Contact />
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-      </footer>
+      <Footer />
     </div>
   );
 }

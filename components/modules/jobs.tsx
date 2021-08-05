@@ -10,14 +10,13 @@ export default function Jobs() {
         {
                 previousJobs.map((job) => {
                   const {
-                    imgAttrs, company, excerpt, color, tags,
+                    imgAttrs, project, color, tags,
                   } = job;
                   return (
                     <Project
-                      key={company}
-                      excerpt={excerpt}
+                      key={project.company}
+                      project={project}
                       imgAttrs={imgAttrs}
-                      company={company}
                       color={color}
                       tags={tags}
                     />

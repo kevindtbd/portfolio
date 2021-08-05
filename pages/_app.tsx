@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   primary: '#00798C',
+  secondary: '#FF6B6B',
   button: `border: none;
   color: white;
   `,

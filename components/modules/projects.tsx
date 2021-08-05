@@ -8,16 +8,15 @@ export default function Projects() {
     <WorkSection title="Projects">
       <>
         {
-                projects.map((project) => {
+                projects.map((proj) => {
                   const {
-                    imgAttrs, company, excerpt, color, tags,
-                  } = project;
+                    imgAttrs, project, color, tags,
+                  } = proj;
                   return (
                     <Project
-                      key={company}
-                      excerpt={excerpt}
+                      key={project.company}
+                      project={project}
                       imgAttrs={imgAttrs}
-                      company={company}
                       color={color}
                       tags={tags}
                     />

@@ -10,8 +10,14 @@ export type CardProps = {
     src: StaticImageData,
     alt: string
   },
-  company: string,
-  excerpt: string,
+  project: {
+    company: string,
+    link?: string,
+    title?: string,
+    timeline: [string, string | 'ongoing'],
+    responsibilities?: Array<string>,
+    excerpt: string,
+  }
   color: Colors,
   tags: Array<string>
 };
