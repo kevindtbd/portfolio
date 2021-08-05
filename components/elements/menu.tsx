@@ -14,13 +14,15 @@ const boxShadow = css`
 const StyledMenu = styled.nav<MenuProps>`
     height: 100vh;
     width: 250px;
-    background: #e6e6e6;
+    background: #ffffff;
+    color: #0a0a0a;
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-shadow: ${({ open }) => (open ? 'none' : boxShadow)};
     border-top-right-radius: 5px;
-    borer-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
     height: 100vh;
     text-align: left;
     padding: 2rem;
@@ -33,7 +35,11 @@ const StyledMenu = styled.nav<MenuProps>`
 
     & a {
       margin-bottom: 1rem;
-      font-weight: bolder;
+      text-align: center;
+    }
+
+    & a:hover, & a:active {
+      color: ${(props) => props.theme.accent3};
     }
 
 `;
