@@ -8,13 +8,14 @@ import { CardProps, Colors } from '../../types/experience';
 // https://css-tricks.com/snippets/javascript/lighten-darken-color/
 function lightenDarkenColor(col: string, amt: number): string {
   let usePound = false;
+  let color = col;
 
-  if (col[0] === '#') {
-    col = col.slice(1);
+  if (color[0] === '#') {
+    color = color.slice(1);
     usePound = true;
   }
 
-  const num = parseInt(col, 16);
+  const num = parseInt(color, 16);
 
   let r = (num >> 16) + amt;
 

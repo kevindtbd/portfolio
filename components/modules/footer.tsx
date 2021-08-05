@@ -42,8 +42,14 @@ export default function Footer() {
   return (
     <StyledFooter>
       <StyledLinkContainer>
-        <a href="https://www.linkedin.com/in/kevin-tran-b3b22a188/" target="_blank" rel="noreferrer" aria-label="linked-in"><LinkedIn /></a>
-        <a href="https://github.com/kevindtbd" target="_blank" rel="noreferrer" aria-label="github"><Github /></a>
+        <a href="https://www.linkedin.com/in/kevin-tran-b3b22a188/" target="_blank" rel="noreferrer" aria-label="linked-in">
+          <LinkedIn />
+          {' '}
+        </a>
+        <a href="https://github.com/kevindtbd" target="_blank" rel="noreferrer" aria-label="github">
+          <Github />
+          {' '}
+        </a>
       </StyledLinkContainer>
       <div>
         <a href="https://github.com/kevindtbd/portfolio" target="_blank" rel="noreferrer">Designed and Built by Kevin Tran</a>
