@@ -17,7 +17,6 @@ const StyledImageContainer = styled.div`
 
 const StyledSkillCard = styled.div`
   border-radius: 5px;
-  // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   padding: 1rem 1rem;
   width: 100px;
   display: flex;

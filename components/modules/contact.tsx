@@ -4,12 +4,13 @@ import { email } from '../../constants/experience';
 
 const StyledButton = styled.a`
     background: ${(props) => props.theme.secondary};
+    background: #6573FF;
     color: white;
     padding: 16px 48px;
     font-size: 16px;
     border-radius: 5px;
     position: relative;
-    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     &:after {
       content: "";
       display: inline-block;

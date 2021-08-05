@@ -2,7 +2,7 @@ export enum Colors {
   IVY_DATA = '#7cc190',
   SEARCH_PILOT = '#7603db',
   DERIVE = '#ef4b6c',
-  PORTFOLIO = '#00798C',
+  PORTFOLIO = '#6573FF',
 }
 
 export type CardProps = {

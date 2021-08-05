@@ -68,7 +68,6 @@ const StyledProjectContainer = styled.div<{ color: string }>`
 
   @media screen and (min-width: 900px) {
     & {
-      flex-wrap: nowrap;
       max-width: 80vw;
     }
   }
@@ -121,7 +120,7 @@ const StyledInfoContainer = styled.div`
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 900px) {
       & {
         max-width: 40%;
       }
@@ -158,7 +157,7 @@ position: relative;
   cursor: pointer;
   border-radius: 5px;
   transition: background .3s ease-in-out;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.3);
 }
 `;
 
