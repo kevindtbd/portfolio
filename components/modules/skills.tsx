@@ -49,14 +49,15 @@ const StyledHeaderWrapper = styled.div`
   margin-bottom: 2rem;
   &:after {
     content: '';
-    width: 70px;
+    width: 50px;
     position: absolute;
-    right: 44%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     height: 10px;
     display: block;
-    border-bottom: 3px solid ${(props) => props.theme.primary};
-}
+    border-bottom: 3px solid ${(props) => props.theme.secondary};
+  }
 `;
 
 const StyledHeader = styled.h2`

@@ -53,8 +53,30 @@ const StyledBannerContainer = styled.div`
 
 `;
 
+const StyledNameSpan = styled.span`
+  &#name {
+    color: ${(props) => props.theme.accent};
+  }
+`;
+
 const StyledHeroTextContainer = styled.div`
   padding: 3rem 3rem;
+
+  & h1 {
+    font-size: clamp(40px, 4.5vw, 80px);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  & h3, & span {
+    color: #dadada;
+  }
+
+  @media screen and (min-width: 769px){
+    & {
+      max-width: 40%;
+    }
+  }
 `;
 
 export default function Hero() {
@@ -62,8 +84,13 @@ export default function Hero() {
     <StyledHeroContainer>
       <StyledBannerContainer>
         <StyledHeroTextContainer>
+          <StyledNameSpan id="name">Hi. My name is Kevin Tran and...</StyledNameSpan>
           <h1>Graphic Design Is My Passion</h1>
-          <span>(Kind of)</span>
+          <h3>(Ok not really)</h3>
+          <span>
+            I&apos;m actually a software engineer who loves to build websites,
+            with an interest in front-end development and software architecture.
+          </span>
         </StyledHeroTextContainer>
         <Image src={Frog} width={Frog.width} height={Frog.height} alt="clipart" />
       </StyledBannerContainer>
