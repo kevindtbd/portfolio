@@ -56,8 +56,8 @@ export default function Menu({ open, setOpen }: MenuProps) {
     setOpen(!open);
   };
   return (
-    <StyledMenu open={open} passHref>
-      <Link href="/#about">
+    <StyledMenu open={open}>
+      <Link href="/#about" passHref>
         <button onClick={onClick} type="submit">
           About
         </button>
