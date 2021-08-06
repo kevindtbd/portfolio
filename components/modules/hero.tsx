@@ -1,8 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
 import styled, { css } from 'styled-components';
-
-import Frog from '../../public/frog.jpg';
 
 const FlexContainer = css`
   display: flex;
@@ -24,7 +21,7 @@ const StyledHeroContainer = styled.section`
   ${HeroBackground}
   color: white; 
   ${FlexContainer}
-  justify-content: center;
+  justify-content: start;
 
   @media screen and (min-wiodth: 393px) {
     & {
@@ -36,7 +33,7 @@ const StyledHeroContainer = styled.section`
 
 const StyledBannerContainer = styled.div`
   ${FlexContainer}
-  justify-content: space-around;
+  justify-content: start;
   flex-wrap: wrap;
   max-width: 90%;
 `;
@@ -56,14 +53,23 @@ const StyledHeroTextContainer = styled.div`
     margin-bottom: 1.5rem;
   }
 
-  & h3, & span {
+  & h3 {
     color: #dadada;
-    font-size: clamp(0.75rem, 1.3vw, 2rem);
+    font-size: clamp(0.75rem, 1.2vw, 2rem);
+  }
+
+  & span {
+    color: #dadada;
+    font-size: clamp(0.75rem, 1vw, 2rem);
+  }
+  & span.sub-description {
+    color: #dadada;
+    font-size: clamp(0.6rem, .9vw, 2rem);
   }
 
   @media screen and (min-width: 769px){
     & {
-      max-width: 40%;
+      max-width: 70%;
     }
   }
 `;
@@ -76,12 +82,12 @@ export default function Hero() {
           <StyledNameSpan id="name">Hi. My name is Kevin Tran and...</StyledNameSpan>
           <h1>Graphic Design Is My Passion</h1>
           <h3>(Ok not really)</h3>
-          <span>
+          <span className="sub-description">
             I&apos;m actually a software engineer who loves to build websites,
             with an interest in front-end development and software architecture.
           </span>
         </StyledHeroTextContainer>
-        <Image src={Frog} width={Frog.width} height={Frog.height} alt="clipart" />
+        {/* <Image src={Frog} width={Frog.width} height={Frog.height} alt="clipart" /> */}
       </StyledBannerContainer>
     </StyledHeroContainer>
   );

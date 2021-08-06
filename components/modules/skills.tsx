@@ -44,7 +44,7 @@ const StyledSkillContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const StyledHeaderWrapper = styled.div`
+const StyledHeaderWrapper = styled.section`
   position: relative;
   margin-bottom: 2rem;
   &:after {
@@ -66,9 +66,13 @@ const StyledHeader = styled.h2`
   padding-bottom: 1rem;
 `;
 
+const StyledSection = styled.section`
+  margin-bottom: 2rem;
+`;
+
 export default function Skills() {
   return (
-    <section>
+    <StyledSection>
       <StyledHeaderWrapper>
         <StyledHeader>Skills</StyledHeader>
       </StyledHeaderWrapper>
@@ -77,6 +81,6 @@ export default function Skills() {
           skillset.map((skill) => <Skillcard key={skill.alt} src={skill.src} alt={skill.alt} />)
         }
       </StyledSkillContainer>
-    </section>
+    </StyledSection>
   );
 }

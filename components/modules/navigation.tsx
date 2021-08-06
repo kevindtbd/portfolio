@@ -1,7 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import Image from 'next/image';
 import Burger from '../elements/burger';
+import Logo from '../../public/logo.svg';
 
 const StyledNavigation = styled.header`
     position: absolute;
@@ -14,8 +16,9 @@ const StyledNavigation = styled.header`
     justify-content: center; 
     color: white; 
     & a {
-      font-size: clamp(0.75rem, 1.3vw, 2rem);
+      font-size: clamp(0.75rem, .8vw, 2rem);
     }
+
 `;
 
 const StyledHeaderContainer = styled.div`
@@ -83,7 +86,7 @@ export default function Navigation({ open, setOpen }: NavigationProps) {
     <StyledNavigation>
       <StyledHeaderContainer>
         <StyledHeaderSection>
-          <span>Logo</span>
+          <Image src={Logo} width={50} height={50} alt="logo" />
           <StyledLinkContainer>
             <Burger open={open} setOpen={setOpen} />
             <Link href="/#about">About</Link>

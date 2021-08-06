@@ -175,7 +175,8 @@ const StyledVisitContainer = styled.div`
 `;
 
 const StyledCaretButton = styled.button`
-  border: 1px solid white;
+  border: 2px solid white;
+  background: rgba(255,255,255,0.1);
   padding: 4px 8px;
   border-radius: 3px;
   color: white;
@@ -188,7 +189,7 @@ const StyledCaretButton = styled.button`
   transition: background 0.3s ease;
 
   &:hover, &:active {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.3);
   }
 
 `;
@@ -198,7 +199,7 @@ const StyledCaret = styled.span<{ open: boolean }>`
   width: 40px;
   height: 25px;
   position: absolute;
-  top: 5px;
+  top: 4px;
   left: 0;
   display: block;
   text-align: left;
@@ -230,8 +231,12 @@ const StyledCaret = styled.span<{ open: boolean }>`
     transform: translateY(-30%);
   }
 
+  &.open:hover, &.open:active {
+    transform: translateY(-50%);
+  }
+
   ${(props) => props.open && `
-    & {
+    &.open {
       transform:rotate(0) translateY(-40%);
       &:before {
         transform:rotate(-45deg);
@@ -240,6 +245,7 @@ const StyledCaret = styled.span<{ open: boolean }>`
         transform:rotate(45deg);
       }
     }
+
   `}
 
 `;
@@ -295,7 +301,7 @@ const Project: FC<CardProps> = ({
         {
           hasResp ? (
             <StyledCaretButton onClick={() => setOpen(!open)} type="button">
-              <StyledCaret open={open} />
+              <StyledCaret open={open} className={open ? 'open' : ''} />
             </StyledCaretButton>
           ) : undefined
         }

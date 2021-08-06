@@ -26,6 +26,10 @@ const StyledFooter = styled.footer`
     padding-top: 15rem;
     padding-bottom: 6rem;
 
+    & div {
+      z-index: 10;
+    }
+
     &:before {
       content: "";
       display: block;
@@ -83,6 +87,7 @@ export default function Footer() {
       <div>
         <a href="https://github.com/kevindtbd/portfolio" target="_blank" rel="noreferrer"><b>Designed and Built by Kevin Tran</b></a>
       </div>
+      <div style={{ marginTop: '1rem' }}><a href="mailto:kevindtbd@gmail.com">Kevindtbd@gmail.com</a></div>
     </StyledFooter>
   );
 }
