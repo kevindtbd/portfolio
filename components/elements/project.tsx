@@ -1,5 +1,5 @@
 /* eslint-disable no-bitwise */
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import Image from 'next/image';
 import styled, { css } from 'styled-components';
 import Responsibilities from './responsibilities';
@@ -60,7 +60,9 @@ const StyledProjectContainer = styled.div<{ color: string }>`
   border-radius: 16px;
   background-color: ${({ color }) => lightenDarkenColor(color, -30)};
   margin-bottom: 3rem; 
+
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: max-height 0.3s ease-in-out;
 
   & span {
     color: #e6e6e6;
@@ -88,6 +90,7 @@ const StyledCard = styled(StyledFlexContainer)<{ color: Colors }>`
     color: white;
     padding: 4rem 2rem;
     flex-wrap: wrap-reverse;
+    position: relative;
 
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
@@ -113,6 +116,10 @@ const StyledTag = styled.div`
 
 const StyledExcerpt = styled.div`
   margin-bottom: 1rem;
+
+  & span {
+    font-size: clamp(0.75rem, 1vw, 2rem);
+  }
 `;
 
 const StyledInfoContainer = styled.div`
@@ -137,7 +144,7 @@ color: white;
 border: 2px solid #ffffff7f;
 padding: 8px 32px;
 font-size: 16px;
-border-radius: 2px;
+border-radius: 5px;
 position: relative;
 
 &:after {
@@ -167,12 +174,93 @@ const StyledVisitContainer = styled.div`
   margin-bottom: 2rem;
 `;
 
+const StyledCaretButton = styled.button`
+  border: 1px solid white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  color: white;
+  background: transparent;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 25px;
+  transition: background 0.3s ease;
+
+  &:hover, &:active {
+    background: rgba(255,255,255,0.1);
+  }
+
+`;
+
+const StyledCaret = styled.span<{ open: boolean }>`
+  cursor: pointer;
+  width: 40px;
+  height: 25px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: block;
+  text-align: left;
+  transition: .4s ease;
+  transform: rotate(0) translateY(-20%);
+
+  &:after,&:before {
+    background-color:transparent;
+    border-bottom: 10px solid #fff;
+    box-sizing:content-box;
+    content:'';
+    display:inline-block;
+    height:8px;
+    left: 45%;
+    position:absolute;
+    top:5px;
+    transition:.4s ease;
+    width: 3px;
+    transform: translateY(-20px);
+  }
+  &:before {
+    transform:rotate(-135deg);
+  }
+  &:after {
+    transform:rotate(135deg);
+  }
+
+  &:hover, &:active {
+    transform: translateY(-30%);
+  }
+
+  ${(props) => props.open && `
+    & {
+      transform:rotate(0) translateY(-40%);
+      &:before {
+        transform:rotate(-45deg);
+      }
+      &:after {
+        transform:rotate(45deg);
+      }
+    }
+  `}
+
+`;
+
+const Title:FC<{ title: string }> = ({ title }) => (
+  <StyledJobSpan>
+    Role:
+    {' '}
+    {title}
+  </StyledJobSpan>
+);
+
 const Project: FC<CardProps> = ({
   imgAttrs, project, color, tags,
 }) => {
   const {
     company, link, title, timeline, responsibilities, excerpt,
   } = project;
+
+  const hasResp = Boolean(Array.isArray(responsibilities) && responsibilities.length);
+  const [open, setOpen] = useState<boolean>(hasResp);
 
   const { src, alt } = imgAttrs;
 
@@ -182,15 +270,7 @@ const Project: FC<CardProps> = ({
         <StyledInfoContainer>
           <h3>{company}</h3>
           {
-            title && (
-            <>
-              <StyledJobSpan>
-                Role:
-                {' '}
-                {title}
-              </StyledJobSpan>
-            </>
-            )
+            title && <Title title={title} />
           }
           <StyledJobSpan>{`From: ${timeline[0]} - ${timeline[1]}`}</StyledJobSpan>
           <StyledExcerpt>
@@ -212,10 +292,17 @@ const Project: FC<CardProps> = ({
           </StyledTagContainer>
         </StyledInfoContainer>
         <Image src={src} alt={alt} width={src.width} height={src.height} />
+        {
+          hasResp ? (
+            <StyledCaretButton onClick={() => setOpen(!open)} type="button">
+              <StyledCaret open={open} />
+            </StyledCaretButton>
+          ) : undefined
+        }
       </StyledCard>
       {
-      responsibilities && <Responsibilities color={color} resp={responsibilities} />
-    }
+      responsibilities && <Responsibilities color={color} resp={responsibilities} open={open} />
+      }
     </StyledProjectContainer>
   );
 };

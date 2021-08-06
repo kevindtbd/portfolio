@@ -1,23 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledResContainer = styled.div<{ color: string }>`
-    width: 100%;
-    background: transparent;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    color: #e6e6e6;
-    border-bottom-right-radius: 7px;
-    border-bottom-left-radius: 7px;
-`;
-
 const StyledList = styled.ul`
     max-width: 90%;
     padding-top: 0;
     padding-bottom: 1.5rem;
+    font-size: clamp(0.75rem, 1vw, 2rem);
   
     & li {
         margin-bottom: 2rem;
@@ -37,12 +25,34 @@ const StyledHeader = styled.h4`
 
 type RespProps = {
   resp: Array<string>,
-  color: string
+  color: string,
+  open: boolean
 };
 
-export default function Responsibilities({ resp, color }: RespProps) {
+const StyledResContainer = styled.div <Omit<RespProps, 'resp'>>`
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    color: #e6e6e6;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    transition: all 0.4s ease;
+    visibility: ${(props) => (props.open ? 'visible' : 'hidden')};
+    opacity: ${(props) => (props.open ? '1' : '0')};
+    max-height: ${(props) => (props.open ? '400px' : '0px')};
+
+    @media screen and (max-width: 768px) {
+      max-height: ${(props) => (props.open ? '650px' : '0px')};
+    }
+
+`;
+
+export default function Responsibilities({ resp, color, open }: RespProps) {
   return (
-    <StyledResContainer color={color}>
+    <StyledResContainer color={color} open={open}>
       <StyledHeader>Responsibilties</StyledHeader>
       <StyledList>
         {

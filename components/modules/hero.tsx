@@ -20,11 +20,18 @@ const HeroBackground = css`
 const StyledHeroContainer = styled.section`
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 900px;
   ${HeroBackground}
   color: white; 
   ${FlexContainer}
   justify-content: center;
+
+  @media screen and (min-wiodth: 393px) {
+    & {
+      height: 100vh;
+    }
+  }
+
 `;
 
 const StyledBannerContainer = styled.div`
@@ -32,25 +39,6 @@ const StyledBannerContainer = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   max-width: 90%;
-
-  // @media screen and (min-width: 900px) {
-  //   & {
-  //     max-width: 80%;
-  //   }
-  // }
-
-  // @media screen and (min-width: 900px) {
-  //   & {
-  //     max-width: 80%;
-  //   }
-  // }
-
-  // @media screen and (min-width: 1200px) {
-  //   & {
-  //     max-width: 1100px;
-  //   }
-  // }
-
 `;
 
 const StyledNameSpan = styled.span`
@@ -63,13 +51,14 @@ const StyledHeroTextContainer = styled.div`
   padding: 3rem 3rem;
 
   & h1 {
-    font-size: clamp(40px, 4.5vw, 80px);
+    font-size: clamp(35px, 4.5vw, 80px);
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
 
   & h3, & span {
     color: #dadada;
+    font-size: clamp(0.75rem, 1.3vw, 2rem);
   }
 
   @media screen and (min-width: 769px){

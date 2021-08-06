@@ -13,6 +13,9 @@ const StyledNavigation = styled.header`
     display: flex;
     justify-content: center; 
     color: white; 
+    & a {
+      font-size: clamp(0.75rem, 1.3vw, 2rem);
+    }
 `;
 
 const StyledHeaderContainer = styled.div`
