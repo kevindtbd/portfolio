@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import Image from 'next/image';
-import Profile from '../../public/profile.JPG';
+import Profile from '../../public/profile.jpg';
 
 const background = css`
 background-color: #ffffff;
