@@ -5,7 +5,7 @@ import { projects } from '../../constants/experience';
 
 export default function Projects() {
   return (
-    <WorkSection title="Projects">
+    <WorkSection title="Projects" id="projects">
       <>
         {
                 projects.map((proj) => {

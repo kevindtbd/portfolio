@@ -5,7 +5,7 @@ import { previousJobs } from '../../constants/experience';
 
 export default function Jobs() {
   return (
-    <WorkSection title="Work Experience">
+    <WorkSection title="Work Experience" id="work">
       <>
         {
                 previousJobs.map((job) => {

@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 type WorkSectionProps = {
   title: string,
-  children: React.ReactElement
+  children: React.ReactElement,
+  id: string
 };
 
 const StyledHeaderWrapper = styled.div`
@@ -28,9 +29,9 @@ const StyledHeaderWrapper = styled.div`
   }
 `;
 
-export default function WorkSection({ title, children }: WorkSectionProps) {
+export default function WorkSection({ title, children, id }: WorkSectionProps) {
   return (
-    <section>
+    <section id={id}>
       <StyledHeaderWrapper>
         <h2>{title}</h2>
       </StyledHeaderWrapper>

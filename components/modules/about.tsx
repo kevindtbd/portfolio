@@ -126,7 +126,7 @@ const StyledTextContainer = styled.div`
 
 export default function About() {
   return (
-    <StyledSection>
+    <StyledSection id="about">
       <StyledAboutWrapper>
         <StyledHeaderWrapper>
           <h2>About Me</h2>

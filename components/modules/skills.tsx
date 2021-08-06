@@ -39,9 +39,13 @@ const skillset: Array<SkillCardProps> = [
 
 const StyledSkillContainer = styled.div`
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 500px) [
+  
+  ]
 `;
 
 const StyledHeaderWrapper = styled.section`
@@ -72,7 +76,7 @@ const StyledSection = styled.section`
 
 export default function Skills() {
   return (
-    <StyledSection>
+    <StyledSection id="skills">
       <StyledHeaderWrapper>
         <StyledHeader>Skills</StyledHeader>
       </StyledHeaderWrapper>

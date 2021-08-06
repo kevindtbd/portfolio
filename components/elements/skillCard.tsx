@@ -18,10 +18,14 @@ const StyledImageContainer = styled.div`
 const StyledSkillCard = styled.div`
   border-radius: 5px;
   padding: 1rem 1rem;
-  width: 100px;
+  width: 150px;
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  @media screen and (min-width: 750px) {
+    width: 100px;
+  }
 `;
 
 export default function SkillCard({ src, alt }: SkillCardProps) {
