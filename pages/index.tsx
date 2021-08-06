@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styled, { createGlobalStyle } from 'styled-components';
-import Header from '../components/modules/navigation';
+import {
+  About, Contact, Footer, Hero, Jobs, Navigation, Projects, Skills,
+} from '../components/modules';
 import Menu from '../components/elements/menu';
-import Hero from '../components/modules/hero';
-import About from '../components/modules/about';
-import Jobs from '../components/modules/jobs';
-import Skills from '../components/modules/skills';
-import Projects from '../components/modules/projects';
-import Contact from '../components/modules/contact';
-import Footer from '../components/modules/footer';
 import styles from '../styles/Home.module.css';
 
 const GlobalStyle = createGlobalStyle`
@@ -22,7 +17,7 @@ const StyledMask = styled.div<{ open: boolean }>`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100vw;0
   height: 100vh;
   z-index: 8;
   background: rgba(0,0,0,0.5);
@@ -50,7 +45,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
-      <Header open={open} setOpen={setOpen} />
+      <Navigation open={open} setOpen={setOpen} />
       <Menu open={open} setOpen={setOpen} />
 
       <main className={styles.main}>

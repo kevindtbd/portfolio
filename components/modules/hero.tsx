@@ -74,19 +74,23 @@ const StyledHeroTextContainer = styled.div`
   }
 `;
 
+const HeroBanner = () => (
+  <StyledHeroTextContainer>
+    <StyledNameSpan id="name">Hi. My name is Kevin Tran and...</StyledNameSpan>
+    <h1>Graphic Design Is My Passion</h1>
+    <h3>(Ok not really)</h3>
+    <span className="sub-description">
+      I&apos;m actually a software engineer who loves to build websites,
+      with an interest in front-end development and software architecture.
+    </span>
+  </StyledHeroTextContainer>
+);
+
 export default function Hero() {
   return (
     <StyledHeroContainer>
       <StyledBannerContainer>
-        <StyledHeroTextContainer>
-          <StyledNameSpan id="name">Hi. My name is Kevin Tran and...</StyledNameSpan>
-          <h1>Graphic Design Is My Passion</h1>
-          <h3>(Ok not really)</h3>
-          <span className="sub-description">
-            I&apos;m actually a software engineer who loves to build websites,
-            with an interest in front-end development and software architecture.
-          </span>
-        </StyledHeroTextContainer>
+        <HeroBanner />
         {/* <Image src={Frog} width={Frog.width} height={Frog.height} alt="clipart" /> */}
       </StyledBannerContainer>
     </StyledHeroContainer>

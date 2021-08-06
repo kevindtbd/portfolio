@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Skillcard, { SkillCardProps } from '../elements/skillCard';
+import SkillCard, { SkillCardProps } from '../elements/skillCard';
 import ReactLogo from '../../public/react.svg';
 import Typescript from '../../public/typescript.svg';
 import Javascript from '../../public/javascript.svg';
@@ -82,7 +82,7 @@ export default function Skills() {
       </StyledHeaderWrapper>
       <StyledSkillContainer>
         {
-          skillset.map((skill) => <Skillcard key={skill.alt} src={skill.src} alt={skill.alt} />)
+          skillset.map((skill) => <SkillCard key={skill.alt} src={skill.src} alt={skill.alt} />)
         }
       </StyledSkillContainer>
     </StyledSection>

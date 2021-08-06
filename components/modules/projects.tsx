@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Project from '../elements/project';
-import WorkSection from './workSection';
-import { projects } from '../../constants/experience';
+import WorkSection from '../elements/workSection';
+import { projects } from '../../constants/index';
 
 export default function Projects() {
   return (

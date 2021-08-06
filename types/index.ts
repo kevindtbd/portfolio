@@ -5,7 +5,7 @@ export enum Colors {
   PORTFOLIO = '#6573FF',
 }
 
-export type CardProps = {
+export type ProjectProps = {
   imgAttrs: {
     src: StaticImageData,
     alt: string

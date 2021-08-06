@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { email } from '../../constants/experience';
+import { email } from '../../constants/index';
 
 const StyledButton = styled.a`
     background: ${(props) => props.theme.secondary};

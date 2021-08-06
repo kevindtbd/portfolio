@@ -124,6 +124,31 @@ const StyledTextContainer = styled.div`
   }
 `;
 
+const ImageContainer = () => (
+  <StyledImageContainer>
+    <StyledImage src={Profile} width={Profile.width} height={Profile.height} alt="profile" />
+  </StyledImageContainer>
+);
+
+const Excerpt = () => (
+  <StyledFlexContainer>
+    <StyledTextContainer>
+      <p>
+        Hi! My name is Kevin Tran and I&apos;m a web developer specializing in React and
+        Node JS. I graduated from the University of Washington-Tacoma in 2019
+        with a degree in Computer Engineering and a degree in Computer Science.
+        My interest in web development started in college when I was introduced to Python for
+        web scraping and image recognition.
+        <br />
+        <br />
+        I&apos;ve had the opportunity to work for some great startups and am always looking
+        for new things to learn.
+      </p>
+    </StyledTextContainer>
+    <ImageContainer />
+  </StyledFlexContainer>
+);
+
 export default function About() {
   return (
     <StyledSection id="about">
@@ -131,24 +156,7 @@ export default function About() {
         <StyledHeaderWrapper>
           <h2>About Me</h2>
         </StyledHeaderWrapper>
-        <StyledFlexContainer>
-          <StyledTextContainer>
-            <p>
-              Hi! My name is Kevin Tran and I&apos;m a web developer specializing in React and
-              Node JS. I graduated from the University of Washington-Tacoma in 2019
-              with a degree in Computer Engineering and a degree in Computer Science.
-              My interest in web development started in college when I was introduced to Python for
-              web scraping and image recognition.
-              <br />
-              <br />
-              I&apos;ve had the opportunity to work for some great startups and am always looking
-              for new things to learn.
-            </p>
-          </StyledTextContainer>
-          <StyledImageContainer>
-            <StyledImage src={Profile} width={Profile.width} height={Profile.height} alt="profile" />
-          </StyledImageContainer>
-        </StyledFlexContainer>
+        <Excerpt />
       </StyledAboutWrapper>
     </StyledSection>
   );

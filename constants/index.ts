@@ -1,4 +1,4 @@
-import { CardProps, Colors } from '../types/experience';
+import { CardProps, Colors } from '../types';
 import SearchPilot from '../public/searchpilot.png';
 import Derive from '../public/derive.png';
 import Ivy from '../public/ivy.png';

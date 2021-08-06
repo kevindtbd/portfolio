@@ -71,23 +71,34 @@ const StyledLinkContainer = styled.div`
     }
 `;
 
+const Socials = () => (
+  <StyledLinkContainer>
+    <a href="https://www.linkedin.com/in/kevin-tran-b3b22a188/" target="_blank" rel="noreferrer" aria-label="linked-in">
+      <LinkedIn />
+      {' '}
+    </a>
+    <a href="https://github.com/kevindtbd" target="_blank" rel="noreferrer" aria-label="github">
+      <Github />
+      {' '}
+    </a>
+  </StyledLinkContainer>
+);
+
+const Contact = () => (
+  <>
+    <div>
+      <a href="https://github.com/kevindtbd/portfolio" target="_blank" rel="noreferrer"><b>Designed and Built by Kevin Tran</b></a>
+    </div>
+    <div style={{ marginTop: '1rem' }}><a href="mailto:kevindtbd@gmail.com">Kevindtbd@gmail.com</a></div>
+
+  </>
+);
+
 export default function Footer() {
   return (
     <StyledFooter>
-      <StyledLinkContainer>
-        <a href="https://www.linkedin.com/in/kevin-tran-b3b22a188/" target="_blank" rel="noreferrer" aria-label="linked-in">
-          <LinkedIn />
-          {' '}
-        </a>
-        <a href="https://github.com/kevindtbd" target="_blank" rel="noreferrer" aria-label="github">
-          <Github />
-          {' '}
-        </a>
-      </StyledLinkContainer>
-      <div>
-        <a href="https://github.com/kevindtbd/portfolio" target="_blank" rel="noreferrer"><b>Designed and Built by Kevin Tran</b></a>
-      </div>
-      <div style={{ marginTop: '1rem' }}><a href="mailto:kevindtbd@gmail.com">Kevindtbd@gmail.com</a></div>
+      <Socials />
+      <Contact />
     </StyledFooter>
   );
 }
