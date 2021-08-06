@@ -35,6 +35,7 @@ const StyledMenu = styled.nav<Omit<MenuProps, 'setOpen'>>`
     transform: ${({ open }) => (open ? 'translateX(0%)' : 'translateX(-100%)')};
 
     & button {
+      font-size: clamp(0.9rem, 0.8vw, 1.2rem);
       border: none;
       padding-top: 4px;
       padding-bottom: 4px;

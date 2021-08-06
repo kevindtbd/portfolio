@@ -17,7 +17,7 @@ const StyledMask = styled.div<{ open: boolean }>`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;0
+  width: 100vw;
   height: 100vh;
   z-index: 8;
   background: rgba(0,0,0,0.5);

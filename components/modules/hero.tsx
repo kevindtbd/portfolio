@@ -55,16 +55,16 @@ const StyledHeroTextContainer = styled.div`
 
   & h3 {
     color: #dadada;
-    font-size: clamp(0.75rem, 1.2vw, 2rem);
+    font-size: clamp(1rem, 1.5vw, 2rem);
   }
 
   & span {
     color: #dadada;
-    font-size: clamp(0.75rem, 1vw, 2rem);
+    font-size: clamp(1rem, 1.5vw, 2rem);
   }
   & span.sub-description {
     color: #dadada;
-    font-size: clamp(0.6rem, .9vw, 2rem);
+    font-size: clamp(0.9rem, 1.2vw, 2rem);
   }
 
   @media screen and (min-width: 769px){
