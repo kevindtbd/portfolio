@@ -1,13 +1,14 @@
-import { CardProps, Colors } from '../types';
+import { ProjectProps, Colors } from '../types';
 import SearchPilot from '../public/searchpilot.png';
 import Derive from '../public/derive.png';
 import Ivy from '../public/ivy.png';
+import Portfolio from '../public/portfolio.png';
 
 export const email = 'kevindtbd@gmail.com';
 
 export const Skills = ['React', 'Typescript', 'Figma', 'Python', 'Node.js', 'Javascript'];
 
-export const previousJobs: Array<CardProps> = [
+export const previousJobs: Array<ProjectProps> = [
   {
     imgAttrs: {
       src: Ivy,
@@ -52,7 +53,7 @@ export const previousJobs: Array<CardProps> = [
   },
 ];
 
-export const projects: Array<CardProps> = [
+export const projects: Array<ProjectProps> = [
   {
     imgAttrs: {
       src: Derive,
@@ -69,7 +70,7 @@ export const projects: Array<CardProps> = [
   },
   {
     imgAttrs: {
-      src: SearchPilot,
+      src: Portfolio,
       alt: 'portfolio',
     },
     project: {
