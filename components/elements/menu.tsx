@@ -37,12 +37,14 @@ const StyledMenu = styled.nav<Omit<MenuProps, 'setOpen'>>`
     & button {
       font-size: clamp(0.9rem, 0.8vw, 1.2rem);
       border: none;
-      padding-top: 4px;
-      padding-bottom: 4px;
+      border-radius: 8px;
+      padding-top: 6px;
+      padding-bottom: 6px;
       background: none;
       color: #fff;
       margin-bottom: 1rem;
       text-align: center;
+      transition: background 0.3s ease;
     }
 
     & button:hover, & button:active {
