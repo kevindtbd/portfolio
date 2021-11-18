@@ -20,34 +20,34 @@ const Title:FC<{ title: string }> = ({ title }) => (
 
 // TAG
 const StyledFlexContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 `;
 
 const StyledTag = styled.div`
-  border-radius: 2px;
-  color: white;
-  background: rgba(255,255,255,0.3);
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  padding: 6px 16px;
+    border-radius: 2px;
+    color: white;
+    background: rgba(255,255,255,0.3);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding: 6px 16px;
 `;
 
 const StyledTagContainer = styled(StyledFlexContainer)`
-  flex-wrap: wrap;
-  justify-content: start;
-  display: none;
-  
-  @media screen and (min-width: 500px) {
-    display: flex;
-  }
+    flex-wrap: wrap;
+    justify-content: start;
+    display: none;
+    
+    @media screen and (min-width: 500px) {
+        display: flex;
+    }
 `;
 
 // VISIT
 const StyledVisitContainer = styled.div`
-  height: fit-content;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+    height: fit-content;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 `;
 
 const StyledVisitLink = styled.a`
@@ -81,11 +81,11 @@ const StyledVisitLink = styled.a`
 
 // CARD
 const StyledExcerpt = styled.div`
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 
-  & span {
-    font-size: clamp(0.75rem, 1vw, 2rem);
-  }
+    & span {
+        font-size: clamp(0.75rem, 1vw, 2rem);
+    }
 `;
 
 const StyledInfoContainer = styled.div`

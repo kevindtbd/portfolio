@@ -28,7 +28,6 @@ const StyledHeroContainer = styled.section`
       height: 100vh;
     }
   }
-
 `;
 
 const StyledBannerContainer = styled.div`

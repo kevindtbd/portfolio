@@ -8,25 +8,25 @@ import Menu from '../components/elements/menu';
 import styles from '../styles/Home.module.css';
 
 const GlobalStyle = createGlobalStyle`
-  h1 {
-    font-size: clamp(1rem, 2rem, 4rem);
-  }
+    h1 {
+      font-size: clamp(1rem, 2rem, 4rem);
+    }
 `;
 
 const StyledMask = styled.div<{ open: boolean }>`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 8;
-  background: rgba(0,0,0,0.5);
-  display: ${(props) => (props.open ? 'block' : 'none')};
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 8;
+    background: rgba(0,0,0,0.5);
+    display: ${(props) => (props.open ? 'block' : 'none')};
 `;
 
 const StyledHome = styled.main`
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 `;
 
 export default function Home() {

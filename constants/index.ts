@@ -3,12 +3,30 @@ import SearchPilot from '../public/searchpilot.png';
 import Derive from '../public/derive.png';
 import Ivy from '../public/ivy.png';
 import Portfolio from '../public/portfolio.png';
+import Quantum from '../public/Quantum.png';
 
 export const email = 'kevindtbd@gmail.com';
 
 export const Skills = ['React', 'Typescript', 'Figma', 'Python', 'Node.js', 'Javascript'];
 
 export const previousJobs: Array<ProjectProps> = [
+  {
+    imgAttrs: {
+      src: Quantum,
+      alt: 'quantum-metric',
+    },
+    project: {
+      company: 'Quantum Metric',
+      excerpt: 'Continuous Product Design Full Session-Replay Company',
+      title: 'Front-End Software Engineer',
+      timeline: ['October 2021', 'Ongoing'],
+      responsibilities: [
+        "it's a secret oooooh",
+      ],
+    },
+    color: Colors.QUANTUM,
+    tags: ['React', 'Typescript', 'MobX', 'GraphQL', 'Jest'],
+  },
   {
     imgAttrs: {
       src: Ivy,
@@ -18,7 +36,7 @@ export const previousJobs: Array<ProjectProps> = [
       company: 'Ivy Data',
       excerpt: 'Real Estate Data Information SaaS Company',
       title: 'Junior Full Stack Developer',
-      timeline: ['August 2020', 'Ongoing'],
+      timeline: ['August 2020', 'October 2021'],
       responsibilities: [
         'Created the flagship product’s dashboard for clients to purchase, preview and search marketing information regarding housing properties',
         'Co-led the flagship product’s launch alongside executives by translating design mock-ups to a scalable product.',

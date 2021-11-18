@@ -3,6 +3,7 @@ export enum Colors {
   SEARCH_PILOT = '#7603db',
   DERIVE = '#ef4b6c',
   PORTFOLIO = '#6573FF',
+  QUANTUM = '#ec005e',
 }
 
 export type ProjectProps = {
