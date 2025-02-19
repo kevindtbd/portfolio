@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export enum Colors {
   IVY_DATA = '#7cc190',
   SEARCH_PILOT = '#7603db',
